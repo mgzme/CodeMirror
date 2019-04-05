@@ -274,17 +274,20 @@
         CodeMirror.defineMIME(mimes[i], mode);
     }
   
-    def(["x-shader/x-vertex", "x-shader/x-fragment"], {
+    def(["x-shader/x-vertex", "x-shader/x-fragment", "text/x-glsl", "text/glsl"], {
       name: "webgl",
-      keywords: words("float int uint bool void " +
-                      "vec2 vec3 vec4 ivec2 ivec3 ivec4 bvec2 bvec3 bvec4 " +
-                      "mat2 mat3 mat4 " +
-                      "sampler2D sampler3D samplerCube " +
-                      "const attribute uniform varying " +
-                      "break continue discard return " +
-                      "for while do if else struct " +
-                      "in out inout"),
-      blockKeywords: words("for while do if else struct"),
+      keywords: words("attribute const uniform varying break continue do " +
+                      "for while if else in out inout float int uint void " +
+                      "bool true false lowp mediump highp precision invariant " +
+                      "discard return mat2 mat3 mat4 mat2x2 mat2x3 mat2x4 " +
+                      "mat3x2 mat3x3 mat3x4 mat4x2 mat4x3 mat4x4 vec2 vec3 vec4 " +
+                      "ivec2 ivec3 ivec4 bvec2 bvec3 bvec4 uvec2 uvec3 uvec4 " +
+                      "sampler2D sampler3D samplerCube samplerCubeShadow " +
+                      "sampler2DShadow sampler2DArray sampler2DArrayShadow " +
+                      "isampler2D isampler3D isamplerCube isampler2DArray " +
+                      "usampler2D usampler3D usamplerCube usampler2DArray " +
+                      "struct gl_FragCoord gl_FragColor fragCoord fragColor"),
+      blockKeywords: words("case switch for while do if else struct"),
       builtin: words("radians degrees sin cos tan asin acos atan " +
                       "pow exp log exp2 sqrt inversesqrt " +
                       "abs sign floor ceil fract mod min max clamp mix step smoothstep " +
@@ -293,19 +296,25 @@
                       "lessThan lessThanEqual greaterThan greaterThanEqual " +
                       "equal notEqual any all not " +
                       "texture texture2D texture2DLod texture2DProjLod " +
-                      "textureCube textureCubeLod fft"),
+                      "textureCube textureCubeLod"),
       atoms: words("true false " +
-                  "fragColor" +
+                  "fragColor " +
                   "gl_FragColor " +
+                  "fragCoord " +
                   "gl_PointCoord " +
                   "gl_Position gl_PointSize " +
                   "gl_FragCoord gl_FrontFacing " +
                   "gl_FragData " +
                   "gl_DepthRangeParameters " +
-                  "gl_MaxVertexAttribs gl_MaxVaryingVectors gl_MaxVertexUniformVectors" +
+                  "gl_MaxVertexAttribs gl_MaxVaryingVectors gl_MaxVertexUniformVectors " +
                   "gl_MaxVertexTextureImageUnits gl_MaxTextureImageUnits " +
                   "gl_MaxFragmentUniformVectors " +
-                  "gl_MaxDrawBuffers"),
+                  "gl_MaxDrawBuffers " +
+                  "time mouse resolution backbuffer surfaceSize surfacePosition " +
+                  "dtime date " +
+                  "iResolution iTime iGlobalTime iTimeDelta iFrame iFrameRate iMouse iDate " +
+                  "fft fftAvg fftLowerMax fftLowerAvg fftUpperMax fftUpperAvg " +
+                  "fftLowerMaxFr fftLowerAvgFr fftUpperMaxFr fftUpperAvgFr null"),
       hooks: {"#": cppHook},
       modeProps: {fold: ["brace", "include"]}
     });
