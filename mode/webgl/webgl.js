@@ -11,7 +11,7 @@
   })(function(CodeMirror) {
   "use strict";
   
-  CodeMirror.defineMode("clike", function(config, parserConfig) {
+  CodeMirror.defineMode("webgl", function(config, parserConfig) {
     var indentUnit = config.indentUnit,
         statementIndentUnit = parserConfig.statementIndentUnit || indentUnit,
         dontAlignCalls = parserConfig.dontAlignCalls,
@@ -275,8 +275,8 @@
     }
   
     def(["x-shader/x-vertex", "x-shader/x-fragment"], {
-      name: "clike",
-      keywords: words("float int bool void " +
+      name: "webgl",
+      keywords: words("float int uint bool void " +
                       "vec2 vec3 vec4 ivec2 ivec3 ivec4 bvec2 bvec3 bvec4 " +
                       "mat2 mat3 mat4 " +
                       "sampler2D sampler3D samplerCube " +
@@ -292,9 +292,10 @@
                       "reflect refract matrixCompMult " +
                       "lessThan lessThanEqual greaterThan greaterThanEqual " +
                       "equal notEqual any all not " +
-                      "texture2D texture2DLod texture2DProjLod " +
-                      "textureCube textureCubeLod "),
+                      "texture texture2D texture2DLod texture2DProjLod " +
+                      "textureCube textureCubeLod fft"),
       atoms: words("true false " +
+                  "fragColor" +
                   "gl_FragColor " +
                   "gl_PointCoord " +
                   "gl_Position gl_PointSize " +
