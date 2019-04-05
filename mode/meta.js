@@ -153,6 +153,7 @@
     {name: "TypeScript", mime: "application/typescript", mode: "javascript", ext: ["ts"], alias: ["ts"]},
     {name: "TypeScript-JSX", mime: "text/typescript-jsx", mode: "jsx", ext: ["tsx"], alias: ["tsx"]},
     {name: "Twig", mime: "text/x-twig", mode: "twig"},
+    {name: "WebGL", mimes: ["x-shader/x-vertex", "x-shader/x-fragment"], mode: "webgl", ext: ["vert", "frag", "glsl", "webgl", "js", "jsx"]},
     {name: "Web IDL", mime: "text/x-webidl", mode: "webidl", ext: ["webidl"]},
     {name: "VB.NET", mime: "text/x-vb", mode: "vb", ext: ["vb"]},
     {name: "VBScript", mime: "text/vbscript", mode: "vbscript", ext: ["vbs"]},
