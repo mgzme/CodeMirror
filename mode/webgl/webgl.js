@@ -311,10 +311,10 @@
                   "gl_MaxFragmentUniformVectors " +
                   "gl_MaxDrawBuffers " +
                   "time mouse resolution backbuffer surfaceSize surfacePosition " +
-                  "dtime date " +
+                  "dtime date frame framerate " +
                   "iResolution iTime iGlobalTime iTimeDelta iFrame iFrameRate iMouse iDate " +
-                  "fft fftAvg fftLowerMax fftLowerAvg fftUpperMax fftUpperAvg " +
-                  "fftLowerMaxFr fftLowerAvgFr fftUpperMaxFr fftUpperAvgFr null"),
+                  "fft fftAvg fftMax fftFrc fftLowerAvg fftLowerMax fftLowerFrc " +
+                  "fftUpperAvg fftUpperMax fftUpperFrc null"),
       hooks: {"#": cppHook},
       modeProps: {fold: ["brace", "include"]}
     });
