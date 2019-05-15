@@ -314,7 +314,10 @@
                   "dtime date frame framerate " +
                   "iResolution iTime iGlobalTime iTimeDelta iFrame iFrameRate iMouse iDate " +
                   "fft fftAvg fftMax fftFrc fftLowerAvg fftLowerMax fftLowerFrc " +
-                  "fftUpperAvg fftUpperMax fftUpperFrc null"),
+                  "fftUpperAvg fftUpperMax fftUpperFrc fftArrA fftArrB fftArrC fftArrD null " +
+                  "iChannel0 iChannel1 iChannel2 iChannel3 iChannel4 iChannel5 iChannel6 " +
+                  "iChannel7 iChannel8 iChannel9 iChannel10 iChannel11 iChannel12 iChannel13 " +
+                  "iChannel14 iChannel15 iChannel16 iChannel17 iChannel18 iChannel19 iChannel20"),
       hooks: {"#": cppHook},
       modeProps: {fold: ["brace", "include"]}
     });
