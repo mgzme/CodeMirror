@@ -292,11 +292,13 @@
                       "pow exp log exp2 sqrt inversesqrt " +
                       "abs sign floor ceil fract mod min max clamp mix step smoothstep " +
                       "length distance dot cross normalize faceforward " +
-                      "reflect refract matrixCompMult " +
+                      "reflect refract matrixCompMult dFdx dFdy fwidth " +
                       "lessThan lessThanEqual greaterThan greaterThanEqual " +
                       "equal notEqual any all not " +
                       "texture texture2D texture2DLod texture2DProjLod " +
-                      "textureCube textureCubeLod"),
+                      "textureCube textureCubeLod " +
+                      "texture2DLodEXT texture2DProjLodEXT texture2DProjLodEXT textureCubeLodEXT " +
+                      "texture2DGradEXT texture2DProjGradEXT texture2DProjGradEXT textureCubeGradEXT"),
       atoms: words("true false " +
                   "fragColor " +
                   "gl_FragColor " +
@@ -313,7 +315,7 @@
                   "time mouse resolution backbuffer surfaceSize surfacePosition " +
                   "dtime date frame framerate " +
                   "iResolution iTime iGlobalTime iTimeDelta iFrame iFrameRate iMouse iDate " +
-                  "fft fftAvg fftMax fftFrc fftLowerAvg fftLowerMax fftLowerFrc " +
+                  "alpha fft fftAvg fftMax fftFrc fftLowerAvg fftLowerMax fftLowerFrc " +
                   "fftUpperAvg fftUpperMax fftUpperFrc fftArrA fftArrB fftArrC fftArrD null " +
                   "iChannel0 iChannel1 iChannel2 iChannel3 iChannel4 iChannel5 iChannel6 " +
                   "iChannel7 iChannel8 iChannel9 iChannel10 iChannel11 iChannel12 iChannel13 " +
